@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block title %}Главное{% endblock title %}
+{% block content %}
+    {% for n in number %}
+        <h3>{{ n.name }}</h3>
+    {% endfor %}
+{% endblock content %}
