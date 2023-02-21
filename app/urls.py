@@ -3,5 +3,7 @@ from .views import *
 
 urlpatterns = [
     path('', Menu),
-    path('class/', Class) 
+    path('news/', Our_school),
+    path('news/<int:pk>/', Detail),
+    path('classes/<int:rubric_id>/', Klas)
 ]

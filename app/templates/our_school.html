@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Главное{% endblock title %}
+
+{% block classes %}
+    {% for n in rubric_number %}
+      <li><a class="dropdown-item" href="/classes/{{ n.pk}}" style="text-align:center;">{{ n.name }}</a></li>
+    {% endfor %}
+{% endblock %}
+
+{% block content %}
+  <div style="padding-left: 6%; padding-top: 3%;">
+    {% for n in news %}
+      <div style="padding-top: 5%;">
+        <div class="card" style="width: 18rem;">
+          <img src="{{ n.image1.url }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock content %}

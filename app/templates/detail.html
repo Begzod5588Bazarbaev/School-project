@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Новости{% endblock title %}
+
+{% block classes %}
+    <div style="text-align:center;">
+        {% for n in rubric_number %}
+            {% for n in rubric_number %}
+      <li><a class="dropdown-item" href="/classes/{{ n.pk}}" style="text-align:center;">{{ n.name }}</a></li>
+    {% endfor %}
+
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div style="padding-top:5%;">
+      <h1>{{ news.title }}</h1>
+      <img>
+    </div>
+{% endblock content %}

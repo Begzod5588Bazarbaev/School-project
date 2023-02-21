@@ -4,17 +4,18 @@
 {% block title %}Главное{% endblock title %}
 
 {% block classes %}
-  <div style="text-align:center;;">
     {% for n in rubric_number %}
       <li><a class="dropdown-item" href="/classes/{{ n.pk}}" style="text-align:center;">{{ n.name }}</a></li>
     {% endfor %}
 
-  </div>
-  
 {% endblock %}
 
 {% block content %}
-    <div>
-      <h1 style="padding-top: 5%; text-align: center; font-size: 700%;">PROGRESS</h1>
-    </div>
+
+  <h1 style="padding-top:5%;">{{ current_rubric.name }} классы:</h1>
+
+  {% for n in klass %}
+    <h3>{{n.class_name}}</h3>
+  {% endfor %}
+
 {% endblock content %}
